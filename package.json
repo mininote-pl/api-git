@@ -26,9 +26,11 @@
   "author": "Tomasz Sapletta",
   "company": "Softreck OÜ",
   "license": "MIT",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
+    "base-64": "^0.1.0",
+    "github-api": "^3.2.0",
+    "octokat": "^0.10.0",
     "simple-git": "1.113.0"
   }
 }
