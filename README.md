@@ -31,10 +31,10 @@ https://github.com/github-tools/github
                     + point
                         + all: list
                         + id: content
-                    + content: text
-                + add
-                + remove
                 + create
+                + read
+                + update
+                + delete
 
             + description
             + name
