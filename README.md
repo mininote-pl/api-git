@@ -21,9 +21,23 @@ https://github.com/github-tools/github
 
 ## API architecture
 
+### query tree
 
-    + organisation
-        + repository
-            + files tree
-                + files points
-                    + points content
+    + organisation: list
+        + repository: list
+            + file
+                + all: tree
+                    + point
+                        + all: list
+                        + id: content
+                    + content: text
+
+### examples
+
+organisation/*/repository/*/file/all
+
+organisation/*/repository/*/file/*/point/all
+
+organisation/*/repository/*/file/*/content
+
+organisation/*/repository/*/file/*/point/all
