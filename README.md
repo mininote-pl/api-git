@@ -25,12 +25,26 @@ https://github.com/github-tools/github
 
     + organisation: list
         + repository: list
+            + info
             + file
                 + all: tree
                     + point
                         + all: list
                         + id: content
                     + content: text
+                + add
+                + remove
+                + create
+
+            + description
+            + name
+            + url
+            + user
+                + list
+            + stars
+            + fork
+
+
 
 ### examples
 
