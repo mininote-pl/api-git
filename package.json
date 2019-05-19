@@ -1,0 +1,34 @@
+{
+  "name": "note-app-vuejs-vuex",
+  "version": "1.0.1",
+  "description": "A notes application for clouds such github, gitlub, bitbucket, built using VueJs and Vuex",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mininote-pl/editor.git"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot",
+    "build": "webpack -p",
+    "serve": "vue-cli-service serve ./example/main.js --open",
+    "build:doc": "vue-cli-service build ./example/main.js --dest docs --mode development",
+    "lint": "vue-cli-service lint src example",
+    "prepublishOnly": "npm run lint && npm run test:unit && npm run build:doc && npm run build",
+    "test:unit": "vue-cli-service test:unit --coverage",
+    "test:coverage": "vue-cli-service test:unit --coverage --verbose && codecov"
+  },
+  "keywords": [
+    "vuejs",
+    "vuex",
+    "notes",
+    "mininotes"
+  ],
+  "author": "Tomasz Sapletta",
+  "company": "Softreck OÜ",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "simple-git": "1.113.0"
+  }
+}
