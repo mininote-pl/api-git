@@ -19,23 +19,66 @@ https://github.com/github-tools/github
     install.bat
 
 
-## API architecture
+## API github
 
-### query tree
+### source
++ git
++ github
++ bitbucket
++ ...
 
+### organisation
++ username
++ company
++ project
+
+### repository
+
+### file
+lista lub drzewo plików
+
+### folder
+lista lub drzewo katalogów
+
+### section
+struktura paragrafów/akapitów
+rozwiązanie do zarządzania punktami w plikach, zamiast całą treścią,
+możliwe jest łatwiejsze przenoszenie małych częsci plików pomiedzy nimi.
+Ułatwia podgląd zawartości
+
+## query tree
+
++ source: list
     + organisation: list
         + repository: list
-            + info
-            + file
+            + section
                 + all: tree
-                    + point
-                        + all: list
-                        + id: content
-                + create
-                + read
+                + id: content
+                + move
+                + copy
+                + duplicate
                 + update
                 + delete
 
+            + file
+                + all: tree
+
+                + name
+                    + read
+                        + section
+                            + all: list
+                            + id: content
+                    + update
+                    + delete
+
+                + create
+
+            + folder
+                + all: tree
+                + id: CRUD
+
+
+            + info
             + description
             + name
             + url
@@ -46,12 +89,23 @@ https://github.com/github-tools/github
 
 
 
+
 ### examples
 
-organisation/*/repository/*/file/all
 
-organisation/*/repository/*/file/*/point/all
+source/*/organisation/*/repository/*/section/*/all
 
-organisation/*/repository/*/file/*/content
+source/*/organisation/*/repository/*/folder/*/all
 
-organisation/*/repository/*/file/*/point/all
+source/*/organisation/*/repository/*/file/all
+
+source/*/organisation/*/repository/*/file/*/section/all
+
+source/*/organisation/*/repository/*/file/*/content
+
+source/*/organisation/*/repository/*/file/*/point/all
+
+
+## API Wordpress
+
+    + domain
